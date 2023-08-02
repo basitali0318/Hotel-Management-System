@@ -1,0 +1,57 @@
+create database hotelmangementsystem;
+show databases;
+use hotelmangementsystem;
+create table login(username varchar(25),password varchar(25));
+insert into login values('admin','12345');
+select * from login;
+create table employee(name varchar(25),age varchar(10),gender varchar(15), Job varchar(15),salary varchar(20),phone varchar(15),email varchar(40),IDCARDNumber varchar(20));
+create table room (
+    roomnumber varchar(10),
+    available varchar(20),
+    cleaning_status varchar(20),
+    price varchar(20),
+    bed_type varchar(10));
+    select * from room;
+   
+DROP TABLE drivers;
+CREATE TABLE drivers (
+		name VARCHAR(25),
+		age VARCHAR(10),
+		gender VARCHAR(15),
+		car_model VARCHAR(15),
+		car_company VARCHAR(20),
+		location VARCHAR(15),
+		availability VARCHAR(40)
+	);    
+	
+ 
+select * from drivers; 
+CREATE TABLE customers (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id_type TEXT NOT NULL,
+    id_number TEXT NOT NULL,
+    name TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    country TEXT NOT NULL,
+    room_number INTEGER NOT NULL,
+    check_in_date TEXT NOT NULL,
+    deposit REAL NOT NULL
+);
+
+select * from customers ; 
+
+CREATE TABLE Department (
+    DepartmentID INT AUTO_INCREMENT PRIMARY KEY,
+    DepartmentName VARCHAR(100) NOT NULL,
+    Location VARCHAR(100) NOT NULL,
+    NumOfEmployees INT NOT NULL
+);
+
+INSERT INTO Department (DepartmentName, Location, NumOfEmployees) VALUES
+('Front Office', '1st floor', 15),
+('House Keeping', '2nd floor', 20),
+('Food and Beverages', 'Ground floor', 25),
+('Kitchen and Food', 'Basement', 30);
+select * from employee; 
+DELETE FROM drivers WHERE car_company = '123';
+
